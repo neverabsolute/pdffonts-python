@@ -19,7 +19,7 @@ from pdffonts-python import PDFFonts
 pdffonts = PDFFonts()
 
 # List fonts in a PDF file
-fonts = pdffonts.get_pdf_fonts('example.pdf')
+fonts = pdffonts.get_pdf_fonts("example.pdf")
 print(fonts)
 ```
 
@@ -28,18 +28,24 @@ print(fonts)
 ```json
 [
   {
-    "name": "F1",
-    "type": "Type 1",
-    "encoding": "WinAnsiEncoding",
-    "embedded": false,
-    "subtype": "Type1"
+    "name": "AAAAAJ+Connections_Medium_CZEX0A80",
+    "type": "Type 1C",
+    "encoding": "Custom",
+    "embedded": "yes",
+    "subset": "yes",
+    "unicode": "yes",
+    "object": "12",
+    "id": "0"
   },
   {
-    "name": "F2",
-    "type": "TrueType",
-    "encoding": "Identity-H",
-    "embedded": true,
-    "subtype": "TrueType"
+    "name": "AAAAAH+ConnectionsIta_CZEX0AC0",
+    "type": "Type 1C",
+    "encoding": "Custom",
+    "embedded": "yes",
+    "subset": "yes",
+    "unicode": "yes",
+    "object": "23",
+    "id": "0"
   }
 ]
 ```
