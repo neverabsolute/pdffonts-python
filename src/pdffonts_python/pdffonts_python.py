@@ -1,7 +1,7 @@
 import subprocess
 
 
-class PDFFontParser:
+class PDFFonts:
     """
     A class to parse the output of the `pdffonts` command-line tool.
     The `pdffonts` command is part of the Poppler utilities and is used to list
@@ -31,7 +31,7 @@ class PDFFontParser:
         # before e.g. ["CID", "Type", "0C"] which is 3 tokens.
         self.__pdf_font_types_tokenized.sort(key=lambda x: len(x), reverse=True)
 
-    def __parse_pdffonts_line(self, line: str):
+    def __parse_pdffonts_line(self, line: str) -> dict | None:
         """
         Parse a single non-header line from pdffonts output into a dict:
 
@@ -102,7 +102,7 @@ class PDFFontParser:
             "id": id_field,
         }
 
-    def get_pdf_fonts(self, pdf_path: str):
+    def get_pdf_fonts(self, pdf_path: str) -> list[dict]:
         """
         Runs pdffonts on pdf_path, parses the output lines,
         and returns a list of font-info dictionaries.

@@ -19,7 +19,7 @@ from pdffonts-python import PDFFonts
 pdffonts = PDFFonts()
 
 # List fonts in a PDF file
-fonts = pdffonts.list_fonts('example.pdf')
+fonts = pdffonts.get_pdf_fonts('example.pdf')
 print(fonts)
 ```
 
