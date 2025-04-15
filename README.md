@@ -13,7 +13,7 @@ pip install pdffonts-python
 ## Usage
 
 ```python
-from pdffonts-python import PDFFonts
+from pdffonts_python import PDFFonts
 
 # Create an instance of PDFFonts
 pdffonts = PDFFonts()
