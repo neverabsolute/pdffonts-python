@@ -1,4 +1,5 @@
 import subprocess
+from typing import Union
 
 
 class PDFFonts:
@@ -31,7 +32,7 @@ class PDFFonts:
         # before e.g. ["CID", "Type", "0C"] which is 3 tokens.
         self.__pdf_font_types_tokenized.sort(key=lambda x: len(x), reverse=True)
 
-    def __parse_pdffonts_line(self, line: str) -> dict | None:
+    def __parse_pdffonts_line(self, line: str) -> Union[dict, None]:
         """
         Parse a single non-header line from pdffonts output into a dict:
 
